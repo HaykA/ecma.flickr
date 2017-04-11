@@ -1,0 +1,102 @@
+body {
+    background-color: #111;
+    color: #ddd;
+}
+
+a {
+    color: #2277ff;
+}
+
+a:hover {
+    color: #4499ff;
+}
+
+
+.form-hover > fieldset:hover,
+.fieldset-hover:hover {
+    background-color: #222;
+    border-color: #333;
+}
+
+.form legend,
+.form legend,
+.form .textbox-label {
+    color: #ddd;
+}
+
+
+.form fieldset {
+    background-color: #191919;
+    border: 1px solid #222;
+}
+
+body .ghost,
+.ghost .button,
+.ghost .textbox,
+.ghost .combobox {
+    color: #bbb;
+}
+
+button.ghost:hover:enabled,
+.ghost .button:hover:enabled {
+    background-color: #333;
+    color: #ddd;
+}
+
+button.ghost:active:enabled,
+.ghost .button:active:enabled {
+    background-color: #222;
+}
+
+.alert {
+    background-color: #222;
+    border-color: #333;
+}
+
+[aria-label=close],
+[aria-label=slideaway],
+[aria-label=fadeaway],
+.modal-header [aria-label=close-modal],
+.modal-header [aria-label=fadeaway-modal] {
+    color: #bbb;
+}
+
+[aria-label=close]:hover:enabled,
+[aria-label=slideaway]:hover:enabled,
+[aria-label=fadeaway]:hover:enabled {
+    background-color: #333;
+    color: #ddd;
+}
+
+[role=tablist] .tablist-buttons li a {
+    color: #ddd;
+}
+
+[role=tablist] .tablist-buttons li a:hover {
+    color: #4499ff;
+}
+
+[role=tablist] .tablist-buttons li.active a {
+    color: #000;
+}
+
+.gallery a:hover {
+    color: #000;
+}
+
+.modal {
+    color: #ddd;
+}
+
+.modal-content {
+    border-color: #222;
+    background-color: #111;
+}
+
+.modal-header {
+    border-color: #222;
+}
+
+.modal-footer {
+    border-color: #222;
+}

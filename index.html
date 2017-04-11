@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="author" content="Hayk AVETISYAN"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <link rel="shortcut icon" type="image/ico" href="https://s.yimg.com/pw/favicon.ico"/>
+
+    <link rel="stylesheet" type="text/css"
+          href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css"/>
+    <link id="hcf" rel="stylesheet" type="text/css" href="assets/frameworks/hcf/haykscompactframework_3.0.1-a.css"/>
+    <link id="dark" rel="stylesheet" type="text/css" href="assets/frameworks/hcf/haykscompactframework-theme-dark_3.0.1-a.css"/>
+
+    <link rel="stylesheet" type="text/css" href="assets/css/screen.css"/>
+
+    <title>Flickr It!</title>
+</head>
+<body class="dark">
+<div class="ajax-cover"></div>
+<div class="container">
+    <header>
+        <h1><span class="logo gambler gambler-spinner"><i class="fa fa-flickr"></i> Flickr It!</span></h1>
+    </header>
+    <main class="compact-centered">
+        <form id="flickr-search">
+            <fieldset>
+                <div class="control-group ghost">
+                    <span class="control-group-button" data-tooltip="title" title="Gamble It!" data-tooltip-offset="3">
+                        <button type="button" id="gamble-button"
+                                class="button button-xl gambler gambler-spinner not-smart-p"></button>
+                    </span>
+                    <input type="text" id="tags" name="tags" placeholder="Type keyword(s) ..."
+                           class="textbox box-xl strong"/>
+                    <span class="control-group-button">
+                        <button type="submit" class="button button-xl" id="search-button" name="search-button">
+                            <i class="fa fa-search"></i></button>
+                    </span>
+                </div>
+                <input type="checkbox" class="checkbox" id="photos-with-location" name="photos-with-location"/>
+                <label for="photos-with-location">Photos with location</label>
+            </fieldset>
+        </form>
+        <div class="button-group pagination"></div>
+        <div id="results" class="gallery gallery-l"></div>
+        <div class="button-group pagination"></div>
+    </main>
+    <div class="compact-centered toggletheme-container">
+        <div class="toggletheme" title="Toggle Theme" data-tooltip="title"><i class="fi-lightbulb"></i></div>
+    </div>
+    <footer>
+        <small>Copyright &copy; 2017 Hayk Avetisyan</small>
+    </footer>
+</div>
+
+<div class="modal" id="details">
+    <div class="modal-content" aria-label="closable">
+        <div class="modal-header">
+            <button type="button" class="button button-l button-l-fw button-close" aria-label="close-modal"><i
+                    class="fa fa-close"></i></button>
+            <h3><i class="fa fa-fw fa-photo"></i> Image Details</h3>
+        </div>
+        <div class="modal-body">
+            <div role="tablist" class="tablist tablist-text">
+                <ul class="tablist-buttons">
+                    <li data-tab="#author">
+                        <a href="#"><i class="fa fa-fw fa-camera"></i><span> Author</span></a>
+                    </li>
+                    <li data-tab="#photo" class="active">
+                        <a href="#"><i class="fa fa-fw fa-photo"></i><span> Photo</span></a>
+                    </li>
+                    <li data-tab="#location">
+                        <a href="#"><i class="fa fa-fw fa-map-marker"></i><span> Location</span></a>
+                    </li>
+                </ul>
+                <div role="tabpanel">
+                    <div id="author" role="tab">
+                        <div class="profile-photo"></div>
+                        <div class="author-details">
+                            <h3 class="author-name">&nbsp;</h3>
+                            <div class="username">
+                                <a href="#" target="_blank">
+                                    <i class="fa fa-flickr"></i>
+                                    <span></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="photo" role="tab" class="active"></div>
+
+                    <div id="location" role="tab">
+                        <div class="google-map" id="google-map"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAU6H9Opm2BhR5Sbov0UqapnJ6sT7E-NCI"></script>
+<script src="/cdn/haykscompactframework_3.0.1-a.js"></script>
+<script type="text/javascript" src="assets/js/script.js"></script>
+<script type="text/javascript" src="assets/js/gambler.js"></script>
+<script type="text/javascript" src="assets/js/details.js"></script>
+</body>
+</html>

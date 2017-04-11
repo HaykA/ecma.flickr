@@ -1,0 +1,1063 @@
+@CHARSET "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700,900');
+
+/* RESET: http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, menu, nav, section {
+    display: block;
+}
+
+/* END RESET */
+
+body {
+    line-height: 1;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Begin Own Framework */
+/*    0   480  Smartphone Portrait */
+/*  481   767  Smartphone Landscape */
+/*  768   991  Tablet Portrait */
+/*  992  1200  Tablet Landscape */
+/* 1201  ...   Monitor */
+/* modal z-index = 999 */
+
+
+body {
+    font-family: "Titillium Web", "Arial", "Helvetica", sans-serif;
+    line-height: 120%;
+    color: #000;
+    font-size: 1rem;
+}
+
+h1, h2, h3 {
+    cursor: default;
+}
+
+h1 {
+    line-height: 100%;
+}
+
+h2 {
+    line-height: 125%;
+}
+
+h3 {
+    line-height: 125%;
+}
+
+.p-justify p, .agn-justify {
+    text-align: justify;
+}
+
+.p-left p, .agn-left {
+    text-align: left;
+}
+
+.p-right p, .agn-right {
+    text-align: right;
+}
+
+.p-center p, .agn-center {
+    text-align: center;
+}
+
+::selection {
+    background-color: #2277ff;
+    color: #fff;
+}
+
+a {
+    color: #0033ff;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #2277ff;
+}
+
+strong, .strong {
+    font-weight: 600;
+}
+
+strong.superstrong {
+    font-weight: 700;
+}
+
+strong.extremestrong {
+    font-weight: 900;
+    text-transform: uppercase;
+}
+
+form {
+    font-size: 1rem;
+}
+
+legend {
+    cursor: default;
+    text-transform: uppercase;
+}
+
+form fieldset:not(:last-of-type) {
+    margin-bottom: 25px;
+}
+
+.form fieldset {
+    background-color: #eee;
+    border: 1px solid #ddd;
+    position: relative;
+}
+
+.form fieldset legend {
+    position: absolute;
+}
+
+.form-hover > fieldset:hover,
+.fieldset-hover:hover {
+    background-color: #ddd;
+    border-color: #ccc;
+}
+
+legend {
+    display: block;
+    font-weight: 600;
+}
+
+.textbox-label {
+    display: block;
+    margin-top: 10px;
+}
+
+.textbox,
+.combobox,
+.textarea {
+    font-family: "Titillium Web", "Arial", "Helvetica", sans-serif;
+    font-size: 1rem;
+
+    box-sizing: border-box;
+    display: block;
+
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+
+.textarea {
+    resize: none;
+}
+
+.textbox {
+    min-height: 30px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.combobox {
+    min-height: 30px;
+}
+
+.box-m {
+    min-height: 40px;
+}
+
+.box-l {
+    min-height: 50px;
+}
+
+.wide,
+.wide {
+    width: 100%;
+}
+
+.textbox[required] {
+    padding-right: 25px;
+}
+
+.required[required] {
+    background-image: url('../media/required.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.button {
+    background-color: #fff;
+    color: #000;
+    font-family: "Titillium Web", "Arial", "Helvetica", sans-serif;
+    text-align: center;
+    vertical-align: text-bottom;
+
+    box-sizing: border-box;
+    display: inline-block;
+
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    padding: 0 6px;
+
+    cursor: pointer;
+    outline: none;
+}
+
+.button-wider {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.button-s {
+    font-size: 1rem;
+    line-height: 28px;
+    height: 30px;
+}
+
+.button-m {
+    font-size: 1.1rem;
+    line-height: 38px;
+    height: 40px;
+}
+
+.button-l {
+    font-size: 1.4rem;
+    line-height: 48px;
+    height: 50px;
+}
+
+.button-s-fw {
+    width: 30px;
+}
+
+.button-m-fw {
+    width: 40px;
+}
+
+.button-l-fw {
+    width: 50px;
+}
+
+.button-xl-fw {
+    width: 75px;
+}
+
+a.button-s:hover, .button:hover:enabled,
+a.button-m:hover, .button-m:hover:enabled,
+a.button-l:hover, .button-l:hover:enabled {
+    background-color: #ddd;
+    border-color: #bbb;
+    color: #000;
+}
+
+.button-s:active:enabled,
+.button-m:active:enabled,
+.button-l:active:enabled {
+    background-color: #ccc;
+    border-color: #aaa;
+}
+
+.button-s:disabled,
+.button-m:disabled,
+.button-l:disabled {
+    background-color: #ccc;
+    border-color: #aaa;
+    color: #999;
+    cursor: not-allowed;
+}
+
+.control-group {
+    position: relative;
+    display: table;
+    border-collapse: separate;
+    width: 100%;
+    float: left;
+}
+.control-group:before,
+.control-group:after {
+    content: "";
+    display: table;
+}
+.control-group:after {
+    clear: both;
+}
+
+.control-group .button {
+    margin-top: 0;
+    margin-left: 0;
+}
+
+.control-group-button {
+    width: 1%;
+    display: table-cell;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-collapse: separate;
+    position: relative;
+    z-index: 2;
+}
+
+.control-group > .textbox,
+.control-group > .combobox {
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    margin-top: 0;
+    display: table-cell;
+    vertical-align: middle;
+    position: relative;
+    z-index: 2;
+}
+
+.control-group > :not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+
+.control-group > :first-child,
+.control-group > :first-child > .button {
+    border-radius: 4px 0 0 4px;
+}
+
+.control-group > :last-child,
+.control-group > :last-child > .button {
+    border-radius: 0 4px 4px 0;
+}
+
+.control-group-button:last-child .button {
+    margin-left: -1px;
+}
+
+.control-group-button:first-child .button {
+    margin-right: -2px;
+}
+
+.control-group-button > .button {
+    z-index: 2;
+}
+
+.control-group .button:focus,
+.control-group .textbox:focus,
+.control-group .combobox:focus {
+    z-index: 30;
+}
+
+.button-group > * {
+    float: left;
+    position: relative;
+    z-index: 2;
+}
+.button-group:before,
+.button-group:after {
+    content: "";
+    display: table;
+}
+.button-group:after {
+    clear:both;
+}
+.button-group > *:focus {
+    z-index: 3;
+}
+.button-group > :not(:first-child):not(:last-child) {
+    border-radius: 0;
+}
+
+.button-group > :first-child,
+.button-group > :first-child > .button {
+    border-radius: 4px 0 0 4px;
+}
+
+.button-group > :last-child,
+.button-group > :last-child > .button {
+    border-radius: 0 4px 4px 0;
+}
+
+.button-group * + * {
+    margin-left: -1px
+}
+
+
+body .ghost,
+.ghost .button,
+.ghost .textbox,
+.ghost .combobox,
+button.ghost:disabled {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+button.ghost:hover:enabled,
+.ghost .button:hover:enabled {
+    background-color: #ddd;
+}
+
+button.ghost:active:enabled,
+.ghost .button:active:enabled {
+    background-color: #ccc;
+}
+
+.checkbox {
+    display: none;
+}
+
+.radio {
+    display: none;
+}
+
+.checkbox + label,
+.radio + label {
+    display: block;
+    line-height: 150%;
+
+}
+
+.inline .checkbox + label,
+.inline .radio + label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.alert {
+    background-color: #eee;
+
+    box-sizing: border-box;
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 10px;
+    position: relative;
+    width: 100%;
+}
+
+.alert p:last-of-type {
+    margin-bottom: 0;
+}
+
+[aria-label=close],
+[aria-label=slideaway],
+[aria-label=fadeaway],
+.modal-header [aria-label=close-modal],
+.modal-header [aria-label=fadeaway-modal] {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    margin: 0;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+[data-tooltip] {
+    position: relative;
+}
+
+.tooltip {
+    font-size: 1rem;
+    position: absolute;
+    white-space: nowrap;
+    border-radius: 3px;
+    padding: 6px 10px;
+    background-color: #2277ff;
+    color: #fff;
+    line-height: 25px;
+}
+
+[role=tablist] {
+    box-sizing: border-box;
+    width: 100%;
+}
+
+[role=tablist] .tablist-buttons li {
+    display: inline-block;
+    float: left;
+}
+
+[role=tablist] .tablist-buttons li.active {
+    background-color: #ccc;
+}
+
+[role=tablist] .tablist-buttons:after,
+[role=tablist] .tablist-buttons:before {
+    content: "";
+    display: table;
+}
+
+[role=tablist] .tablist-buttons:after {
+    clear: both;
+}
+
+[role=tablist] .tablist-buttons li a {
+    display: block;
+    font-weight: 600;
+    color: #000;
+}
+
+[role=tablist] .tablist-buttons li a:hover {
+    color: #2277ff;
+}
+
+[role=tablist] .tablist-buttons li.active a {
+    color: #000;
+    cursor: default;
+}
+
+[role=tabpanel] {
+    width: 100%;
+}
+
+[role=tabpanel] [role=tab]:not(.active) {
+    box-sizing: border-box;
+    display: none;
+}
+
+[role=tab] {
+    box-sizing: border-box;
+    width: 100%;
+    min-height: 100px;
+}
+
+.gallery:after,
+.gallery:before {
+    content: "";
+    display: table;
+}
+.gallery:after {
+    clear: both;
+}
+
+.gallery a {
+    color: #000;
+}
+
+.gallery figure {
+    display: inline-block;
+    float: left;
+    max-width: 100%;
+    position: relative;
+}
+
+.gallery img {
+    display: inline-block;
+    max-width: 100%;
+}
+
+.gallery figure figcaption {
+    box-sizing: border-box;
+    background-color: rgba(255,255,255,0.5);
+    font-size: 0.9rem;
+    line-height: 20px;
+    padding: 2px 4px;
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.hide-overflow {
+    overflow: hidden
+}
+
+.modal {
+    background-color: rgba(0,0,0,0.9);
+    display: none;
+    overflow-y: auto;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    min-height: 100vh;
+    z-index: 999;
+}
+
+.modal-content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 5px #000;
+    min-width: 85vw;
+    max-width: 95vw;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1000;
+}
+
+.modal-header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    height: 51px;
+}
+
+.modal-header h1,
+.modal-header h2,
+.modal-header h3 {
+    margin: 0;
+}
+
+.modal-body {
+    min-height: 100px;
+}
+
+.modal-footer {
+    border-top: 1px solid #eee;
+    vertical-align: text-bottom;
+    min-height: 44px;
+    max-height: 64px;
+    text-align: right;
+}
+
+.button-close:hover:enabled,
+.modal .modal-header .button:hover:enabled {
+    background-color: #cc0000;
+    color: #fff;
+}
+
+.button-close:active:enabled,
+.modal .modal-header .button:active:enabled {
+    background-color: #aa0000;
+    color: #fff;
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 1px 6px;
+    }
+
+    h1 {
+        font-size: 2rem;
+        margin-top: 10px;
+        margin-bottom: 6px;
+    }
+
+    h2 {
+        font-size: 1.35rem;
+        margin-top: 10px;
+        margin-bottom: 2px;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        margin-top: 6px;
+    }
+
+    fieldset {
+        padding-top: 0;
+        margin-top: 6px;
+    }
+
+    legend {
+        font-size: 1.05rem;
+    }
+
+
+    fieldset fieldset legend {
+        font-size: 1.05rem;
+    }
+
+    .box-xl {
+        font-size: 110%;
+    }
+
+    [role=tab] {
+        padding: 6px;
+    }
+
+    .gallery {
+        margin-bottom: 6px;
+    }
+
+    .gallery img {
+        height: auto;
+    }
+
+    .gallery figure,
+    .gallery-s figure,
+    .gallery-m figure,
+    .gallery-l figure {
+        width: 100%;
+        margin-bottom: 3px;
+    }
+
+    .gallery figure img,
+    .gallery-s figure img,
+    .gallery-m figure img,
+    .gallery-l figure img {
+        width: 100%;
+        height: auto;
+    }
+
+    .gallery figure figcaption {
+        bottom: 4px;
+    }
+
+    .not-smart-p {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 481px) {
+    .box-xl {
+        font-size: 2rem;
+    }
+
+    .gallery img {
+        height: 100%;
+    }
+
+    .gallery-s figure {
+        height: 100px;
+        margin-bottom: 8px;
+        margin-right: 8px;
+    }
+
+    .gallery-m figure {
+        height: 180px;
+        margin-bottom: 9px;
+        margin-right: 9px;
+    }
+
+    .gallery-l figure {
+        height: 260px;
+        margin-bottom: 10px;
+        margin-right: 10px;
+    }
+
+    .smart-p-only {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .smart-justify p {
+        text-align: justify;
+    }
+
+    .box-xl {
+        min-height: 60px;
+    }
+
+    .button-xl {
+        font-size: 130%;
+        line-height: 58px;
+        height: 60px;
+    }
+
+    [role=tablist] .tablist-buttons li a {
+        line-height: 35px;
+        padding-right: 5px;
+        padding-left: 5px;
+    }
+
+    [role=tablist]:not(.tablist-icons) .tablist-buttons li a {
+        font-size: 0.8rem;
+        text-transform: uppercase;
+    }
+
+    [role=tablist].tablist-icons .tablist-buttons li a {
+        width: 25px;
+        text-align: center;
+    }
+
+    [role=tablist].tablist-icons .tablist-buttons li a :not(i) {
+        display: none;
+    }
+
+    [role=tablist].tablist-text .tablist-buttons li i {
+        display: none;
+    }
+
+    .modal-content {
+        border-radius: 2px;
+        margin-top: 25px;
+        margin-bottom: 25px;
+    }
+
+    .not-smart {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .box-xl {
+        min-height: 75px;
+    }
+
+    .button-xl {
+        font-size: 2rem;
+        line-height: 73px;
+        height: 75px;
+    }
+
+    [role=tablist] .tablist-buttons li {
+        border-radius: 5px 5px 0 0;
+    }
+
+    [role=tablist] .tablist-buttons li a {
+        font-size: 1rem;
+        line-height: 200%;
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    .modal-content {
+        border-radius: 4px;
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+}
+
+@media screen and (min-width: 481px) and (max-width: 991px) {
+    .container {
+        padding: 1px 10px;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 1.1rem;
+        margin-top: 10px;
+        margin-bottom: 2px;
+    }
+
+    fieldset {
+        padding-top: 3px;
+        margin-top: 6px;
+    }
+
+    legend {
+        font-size: 1.5rem;
+    }
+
+
+    fieldset fieldset legend {
+        font-size: 1.2rem;
+    }
+
+    [role=tab] {
+        padding: 8px;
+    }
+
+    .gallery {
+        margin-bottom: 10px;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    p {
+        margin-bottom: 10px;
+    }
+
+    form {
+        margin-bottom: 10px;
+    }
+
+    .form fieldset {
+        border-radius: 3px;
+        padding: 5px;
+    }
+
+    .form fieldset:not(:last-of-type) {
+        margin-bottom: 12px;
+    }
+
+    .form fieldset legend {
+        top: 10px;
+    }
+
+    .form legend + * {
+        margin-top: 30px;
+    }
+
+    .alert {
+        margin-bottom: 10px;
+    }
+
+    [role=tablist] {
+        margin-bottom: 10px;
+    }
+
+    .modal-header {
+        padding-left: 6px;
+    }
+
+    .modal-body {
+        padding: 6px;
+    }
+
+    .modal-footer {
+        padding: 6px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    p {
+        margin-bottom: 15px;
+
+    }
+
+    h1 {
+        font-size: 2.5rem;
+        margin-top: 20px;
+        margin-bottom: 15px;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+        margin-top: 15px;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
+
+    .container {
+        padding: 1px 15px;
+    }
+
+    form {
+        margin-bottom: 15px;
+    }
+
+    fieldset {
+        padding-top: 5px;
+        margin-top: 15px;
+    }
+
+    legend {
+        font-size: 1.7rem;
+    }
+
+    fieldset fieldset legend {
+        font-size: 1.4rem;
+    }
+
+    .form fieldset {
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+    .form fieldset:not(:last-of-type) {
+        margin-bottom: 15px;
+    }
+
+    .form fieldset legend {
+        top: 15px;
+    }
+
+    .form legend + * {
+        margin-top: 35px;
+    }
+
+    .alert {
+        margin-bottom: 15px;
+    }
+
+    [role=tablist] {
+        margin-bottom: 15px;
+    }
+
+    [role=tab] {
+        padding: 10px;
+    }
+
+    .gallery {
+        margin-bottom: 15px;
+    }
+
+    .modal-header {
+        padding-left: 10px;
+    }
+
+    .modal-body {
+        padding: 10px;
+    }
+
+    .modal-footer {
+        padding: 10px;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .compact {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 1201px) {
+    .compact {
+        width: 1200px;
+    }
+
+    .compact-centered {
+        width: 1200px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+
+
+
+
+
+
