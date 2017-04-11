@@ -43,7 +43,7 @@ var toggleTheme = function (e) {
     var $hcf = $('#hcf');
     if ($hcf != undefined) {
         var $body = $('body');
-        var themeUrl = '/cdn/haykscompactframework-theme-dark_3.0.1-a.css';
+        var themeUrl = 'assets/frameworks/hcf/haykscompactframework-theme-dark_3.0.1-a.css';
         var $dark = $('#dark');
         if ($body.hasClass('dark')) {
             if ($dark != undefined && $dark.attr('href') == themeUrl) {
